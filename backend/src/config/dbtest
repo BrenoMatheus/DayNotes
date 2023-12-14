@@ -1,0 +1,16 @@
+//importando mongoose
+const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
+
+// url com usuario, senha e nome do banco para conectar no mongo DB
+const dbConfig = "mongodb+srv://user:8246@cluster0.ptp8hdr.mongodb.net/?retryWrites=true&w=majority";
+
+//criando conexão com o banco
+const connection = mongoose.connect(dbConfig, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+
+});
+
+
+module.exports = connection;
